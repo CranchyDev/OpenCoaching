@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{baselayout}">
+<body>
+
+    <div layout:fragment="content" class="container">
+        <h1>League of Legends Coaching Booking</h1>
+        <form action="/schedule-coaching" method="POST">
+            <label for="rank">What is your current rank?</label>
+            <select id="rank" name="rank">
+                <option value="iron">Iron</option>
+                <option value="bronze">Bronze</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+                <option value="emerald">Emerald</option>
+                <option value="diamond">Diamond</option>
+                <option value="master">Master</option>
+                <option value="grandmaster">Grandmaster</option>
+                <option value="challenger">Challenger</option>
+            </select>
+
+            <label for="hours">Session Hour(s)</label>
+            <select id="hours" name="hours">
+                <option value="1">1 Hour</option>
+                <option value="2">2 Hours</option>
+                <option value="3">3 Hours</option>
+                <option value="4">4 Hours</option>
+                <option value="5">5 Hours</option>
+                <option value="6">6 Hours</option>
+            </select>
+
+            <label for="coach">List of Coaches and their Ranks:</label>
+            <select id="coach" name="coach">
+                <option th:each="coach : ${coaches}" 
+                    th:value="${coach}" 
+                    th:text="${coach}"></option>
+            </select>
+
+            <button type="submit" class="btn-submit">Get coached!</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenCoaching - LoL Training</title>
+    <!-- Link to static/style.css -->
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <nav>
+        <a href="/coaching" class="logo">⚡ OpenCoaching</a>
+        <div class="nav-links">
+            <a href="/coaching">Coaching</a>
+            <a href="/schedule">Schedule</a>
+            <a href="/prices">Prices</a>
+            <a href="/about">About</a>
+            <a href="/faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Page Content Slot -->
+    <div layout:fragment="content">
+        <!-- Specific page content gets injected here automatically -->
+    </div>
+
+</body>
+</html>

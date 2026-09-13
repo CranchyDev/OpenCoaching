@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #121212;
+    --panel-color: #1e1e1e;
+    --miku-blue: #89CFF0;
+    --text-main: #f0f0f0;
+    --text-muted: #aaaaaa;
+    --border-color: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--panel-color);
+    border-bottom: 2px solid var(--miku-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--miku-blue);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--miku-blue);
+    color: var(--bg-color);
+    border-color: var(--miku-blue);
+    box-shadow: 0 0 10px rgba(137, 207, 240, 0.4);
+}
+
+/* Container Layout */
+.container {
+    max-width: 900px;
+    margin: 3rem auto;
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+h1, h2 {
+    color: var(--miku-blue);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Form Controls */
+label {
+    display: block;
+    margin-top: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+select, input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.4rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: var(--miku-blue);
+}
+
+button.btn-submit {
+    margin-top: 2rem;
+    background-color: var(--miku-blue);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+
+button.btn-submit:hover {
+    opacity: 0.85;
+}
+
+/* Pricing Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    color: var(--miku-blue);
+    background-color: rgba(137, 207, 240, 0.05);
+}

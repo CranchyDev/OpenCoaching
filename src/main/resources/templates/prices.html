@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{baselayout}">
+<body>
+
+    <div layout:fragment="content" class="container">
+        <h1>Coaching Market Rates & Tiers</h1>
+        <p style="color: var(--text-muted);">Competitive rates structured slightly below market average.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank Tier</th>
+                    <th>1 Hour Rate</th>
+                    <th>3 Hours Package</th>
+                    <th>6 Hours Package (Best Value)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Iron – Silver</td>
+                    <td>$12.00</td>
+                    <td>$32.00</td>
+                    <td>$60.00</td>
+                </tr>
+                <tr>
+                    <td>Gold – Emerald</td>
+                    <td>$15.00</td>
+                    <td>$40.00</td>
+                    <td>$75.00</td>
+                </tr>
+                <tr>
+                    <td>Diamond – Master</td>
+                    <td>$22.00</td>
+                    <td>$60.00</td>
+                    <td>$110.00</td>
+                </tr>
+                <tr>
+                    <td>Grandmaster – Challenger</td>
+                    <td>$35.00</td>
+                    <td>$95.00</td>
+                    <td>$180.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

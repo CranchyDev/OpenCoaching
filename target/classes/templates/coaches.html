@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{baselayout}">
+<body>
+
+    <div layout:fragment="content" class="container">
+        <h1>Manage Coaches</h1>
+
+        <form action="/coaches-add" method="POST" style="margin-bottom: 2rem;">
+            <label>Coach Name:</label>
+            <input type="text" name="name" required />
+
+            <label>Rank:</label>
+            <input type="text" name="rank" required />
+
+            <button type="submit">Add Coach</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Rank</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="coach : ${coachesList}">
+                    <td th:text="${coach.id}">1</td>
+                    <td th:text="${coach.name}">Name</td>
+                    <td th:text="${coach.rank}">Rank</td>
+                    <td>
+                        <form th:action="@{/coaches-delete/{id}(id=${coach.id})}" method="POST">
+                            <button type="submit" onclick="return confirm('Delete this coach?');">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
